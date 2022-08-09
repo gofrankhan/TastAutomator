@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <Action type="openurl">
+    <url>https://www.bajus.org/</url>
+    <browser>google chrome</browser>
+  </Action>
+  <Action type="click">
+    <xpath>//*[@id="bs-example-navbar-collapse-1"]/ul/li[7]/a</xpath>
+  </Action>
+  <Action type="readtext">
+    <xpath>/html/body/div/div/div/section[3]/div/div/div/table/tbody/tr[2]/td[3]</xpath>
+	<Store>MyVar</Store>
+  </Action>
+  <Action type="messagebox">
+	<Text>MyVar</Text>
+  </Action>
+</root>

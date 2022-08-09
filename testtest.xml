@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<root>
+   <Action type="openurl">
+      <session>web_session</session>
+      <url>http://demo.guru99.com/test/newtours/index.php</url>
+      <browser>Google Chrome</browser>
+   </Action>
+   <Action type="create_variable">
+      <variable_name>my_str</variable_name>
+      <variable_value>bo</variable_value>
+      <type>string</type>
+   </Action>
+   <Action type="create_variable">
+      <variable_name>temp_str</variable_name>
+      <variable_value>tmp</variable_value>
+      <type>string</type>
+   </Action>
+   <Action type="create_variable">
+      <variable_name>my_list</variable_name>
+      <variable_value>no</variable_value>
+      <type>list</type>
+   </Action>
+   <Action type="readtext">
+      <locator_name>xpath</locator_name>
+      <locator_value>/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[1]/table[1]/tbody/tr[3]/td/table/tbody/tr[1]/td[1]/font</locator_value>
+      <variable>my_str</variable>
+   </Action>
+   <Action type="split_string">
+      <variable1>my_str</variable1>
+      <variable2>my_list</variable2>
+      <delimiter> to </delimiter>
+   </Action>
+   <Action type="excel_create">
+      <session>excel_session</session>
+      <location>F:\Backup\E\2021\MIT\Project\Python\TaskAutomator\</location>
+      <filename>ticket</filename>
+   </Action>
+   <Action type="list_get_value">
+      <variable1>temp_str</variable1>
+      <variable2>my_list</variable2>
+      <delimiter>0</delimiter>
+   </Action>
+   <Action type="create_variable">
+      <variable_name>cell</variable_name>
+      <variable_value>A1</variable_value>
+      <type>string</type>
+   </Action>
+   <Action type="excel_set_value">
+      <session>excel_session</session>
+      <sheetname>Sheet</sheetname>
+      <cell>cell</cell>
+      <value>temp_str</value>
+   </Action>
+   <Action type="list_get_value">
+      <variable1>temp_str</variable1>
+      <variable2>my_list</variable2>
+      <delimiter>1</delimiter>
+   </Action>
+   <Action type="create_variable">
+      <variable_name>cell</variable_name>
+      <variable_value>B1</variable_value>
+      <type>string</type>
+   </Action>
+   <Action type="excel_set_value">
+      <session>excel_session</session>
+      <sheetname>Sheet</sheetname>
+      <cell>cell</cell>
+      <value>temp_str</value>
+   </Action>
+   <Action type="readtext">
+      <locator_name>xpath</locator_name>
+      <locator_value>/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[1]/table[1]/tbody/tr[3]/td/table/tbody/tr[1]/td[2]/div/font/b</locator_value>
+      <variable>temp_str</variable>
+   </Action>
+   <Action type="create_variable">
+      <variable_name>cell</variable_name>
+      <variable_value>C1</variable_value>
+      <type>string</type>
+   </Action>
+   <Action type="excel_set_value">
+      <session>excel_session</session>
+      <sheetname>Sheet</sheetname>
+      <cell>cell</cell>
+      <value>temp_str</value>
+   </Action>
+   <Action type="close_browser">
+      <session>web_session</session>
+   </Action>
+</root>

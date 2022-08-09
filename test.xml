@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <Action type="openurl">
+    <url>http://bajus.org/</url>
+    <browser>google chrome</browser>
+  </Action>
+  <Action type="click">
+    <xpath>/html/body/div[1]/div/div/section[2]/div[1]/nav/div[2]/ul/li[7]/a</xpath>
+  </Action>
+  <Action type="readtext">
+    <xpath>/html/body/div[1]/div/div/section[3]/div/div/div/table/tbody/tr[2]/td[3]</xpath>
+  </Action>
+  <Action type="messagebox">
+    <Text>nav-yesterday-tab</Text>
+  </Action>
+</root>
